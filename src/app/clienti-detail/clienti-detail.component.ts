@@ -18,7 +18,7 @@ export class ClientiDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.clientiService.getCliente(params['id']).subscribe(cliente = this.cliente = cliente);
+      //this.clientiService.getCliente(params['id']).subscribe(cliente = this.cliente = cliente);
     });
   }
 
