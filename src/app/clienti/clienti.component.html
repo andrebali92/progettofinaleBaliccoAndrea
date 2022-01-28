@@ -2,30 +2,26 @@
     <table class="table table-dark table-striped mt-5">
     <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col" class="text-white">#</th>
+          <th scope="col">Ragione Sociale</th>
+          <th scope="col">Partita IVA</th>
+          <th scope="col">Tipo Cliente</th>
+          <th scope="col">Email</th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+        <tr *ngFor="let item of clienti; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{item.ragioneSociale}}</td>
+          <td>{{item.partitaIva}}</td>
+          <td>{{item.tipoCliente}}</td>
+          <td>{{item.email}}</td>
+          <td>
+            <button type ="button" class="btn btn-secondary btn-sm">i</button>
+          </td>
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
+        
       </tbody>
     </table>
 </div>

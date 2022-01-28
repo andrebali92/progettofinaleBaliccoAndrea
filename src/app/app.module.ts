@@ -8,13 +8,15 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpinterceptorInterceptor } from './httpinterceptor.interceptor';
+import { FattureComponent } from './fatture/fatture.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientiComponent,
-    NavbarComponent
+    NavbarComponent,
+    FattureComponent
   ],
   imports: [
     BrowserModule,

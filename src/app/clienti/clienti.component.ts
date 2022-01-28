@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Clienti } from '../classes/clienti';
 import { ClientiService } from '../clienti.service';
 
 @Component({
@@ -8,10 +9,12 @@ import { ClientiService } from '../clienti.service';
 })
 export class ClientiComponent implements OnInit {
 
+  clienti: Clienti[] = [];
+
   constructor(private clientiService: ClientiService ) { }
 
   ngOnInit(): void {
-    this.clientiService.getAllClienti().subscribe(clienti => console.log(clienti))
+    this.clientiService.getAllClienti().subscribe(data => this.clienti = data.content);
   }
 
 }
