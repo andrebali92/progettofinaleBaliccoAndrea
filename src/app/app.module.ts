@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpinterceptorInterceptor } from './httpinterceptor.interceptor';
 import { FattureComponent } from './fatture/fatture.component';
+import { ClientiDetailComponent } from './clienti-detail/clienti-detail.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FattureComponent } from './fatture/fatture.component';
     AppComponent,
     ClientiComponent,
     NavbarComponent,
-    FattureComponent
+    FattureComponent,
+    ClientiDetailComponent
   ],
   imports: [
     BrowserModule,

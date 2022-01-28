@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Clienti } from './classes/clienti';
 import { Clientidata } from './interfaces/clientidata';
 
 @Injectable({
@@ -23,5 +24,10 @@ export class ClientiService {
   getAllClienti() {
     //return this.http.get(this.urlAPI+'api/clienti?page=0&size=20&sort=id,ASC', {headers: this.headers})
     return this.http.get<Clientidata>(environment.clienti);
+  }
+
+
+  getCliente(id: number) {
+    return this.http.get<Clienti>(environment.clienti+id);
   }
 }
